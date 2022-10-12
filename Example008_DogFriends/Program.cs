@@ -1,17 +1,17 @@
 ﻿Console.Clear();
 Console.WriteLine();
 Console.Write("Введите изначальное расстояние между друзьями: ");
-int distance = int.Parse(Console.ReadLine());
+double distance = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите скорость хозяина собаки: ");
-int firstFrindSpeed = int.Parse(Console.ReadLine());
+double firstFrindSpeed = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите скорость его друга: ");
-int secondFrindSpeed = int.Parse(Console.ReadLine());
+double secondFrindSpeed = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите скорость собаки: ");
-int dogSpeed = int.Parse(Console.ReadLine());
-int friend = 2;
+double dogSpeed = Convert.ToDouble(Console.ReadLine());
+byte friend = 2;
 int count = 0;
-int time = 0;
-while (distance > 10)
+double time = 0;
+while (distance > 1)
 {
     if (friend == 1)
     {
