@@ -1,27 +1,71 @@
-﻿Console.WriteLine();                                //отделяем вывод данных программы пустой строкой
+﻿Console.Clear();
+Console.WriteLine();                                //отделяем вывод данных программы пустой строкой
 Console.Write("Введите изначальное расстояние между друзьями в метрах: ");   //запрашиваем и
-double distance = Convert.ToDouble(Console.ReadLine());                      //принимаем расстояние
+string dis = Console.ReadLine();                      //принимаем расстояние
+double distance = 0;
+while (double.TryParse(dis, out distance) == false | distance <= 0)
+{
+    int answer = new Random().Next(0, 4);
+    if (answer == 0)
+    {
+        Console.Write("Расстояние это натуральное число! Введите снова: ");
+        dis = Console.ReadLine();
+    }
+    if (answer == 1)
+    {
+        Console.Write("Ошибка ввода! Введите снова: ");
+        dis = Console.ReadLine();
+    }
+    if (answer == 2)
+    {
+        Console.Write("Не надо нажимать ничего кроме цифр!!! Введите снова: ");
+        dis = Console.ReadLine();
+    }
+    if (answer == 3)
+    {
+        Console.Write("Ошибка! Введите снова: ");
+        dis = Console.ReadLine();
+    }
+}
 while (distance > 40075000)                                             //проверяем не слишком ли
 {                                                                       //оно велико и если это так
     Console.Write("Вообще то экватор короче! Введите число поменьше: ");//просим повторить ввод и
     distance = Convert.ToDouble(Console.ReadLine());                    //обновляем значение
 }
 Console.Write("Введите скорость хозяина собаки в м/с: ");       //запрашиваем и 
-double firstFrindSpeed = Convert.ToDouble(Console.ReadLine());  //принимаем скорость хозяина собаки
+string ffs = Console.ReadLine();                      //принимаем расстояние
+double firstFrindSpeed = 0;
+while (double.TryParse(ffs, out firstFrindSpeed) == false | firstFrindSpeed <= 0)
+{                              
+    Console.Write("Ошибка ввода! Введите снова: ");
+    ffs = Console.ReadLine();
+}                                       //принимаем скорость хозяина собаки
 while (firstFrindSpeed > 12.4)                                              //проверяем не слишком ли
 {                                                                           //оно велико и если это так
     Console.Write("Усейн Болт медленней бегает! Введите число поменьше: "); //просим повторить ввод и
     firstFrindSpeed = Convert.ToDouble(Console.ReadLine());                 //обновляем значение 
 }
 Console.Write("Введите скорость его друга в м/с: ");            //запрашиваем и 
-double secondFrindSpeed = Convert.ToDouble(Console.ReadLine()); //принимаем скорость его друга
+string sfs = Console.ReadLine();                      //принимаем расстояние
+double secondFrindSpeed = 0;
+while (double.TryParse(sfs, out secondFrindSpeed) == false | secondFrindSpeed <= 0)
+{                              
+    Console.Write("Ошибка ввода! Введите снова: ");
+    sfs = Console.ReadLine();
+}                                                            //принимаем скорость его друга
 while (secondFrindSpeed > 12.4)                                             //проверяем не слишком ли
 {                                                                           //оно велико и если это так
     Console.Write("Усейн Болт медленней бегает! Введите число поменьше: "); //просим повторить ввод и
     secondFrindSpeed = Convert.ToDouble(Console.ReadLine());                //обновляем значение 
 }
 Console.Write("Введите скорость собаки в м/с: ");           //запрашиваем и 
-double dogSpeed = Convert.ToDouble(Console.ReadLine());     //принимаем скорость собаки
+string ds = Console.ReadLine();                      //принимаем расстояние
+double dogSpeed = 0;
+while (double.TryParse(ds, out dogSpeed) == false | dogSpeed <= 0)
+{                              
+    Console.Write("Ошибка ввода! Введите снова: ");
+    ds = Console.ReadLine();
+}                                     //принимаем скорость собаки
 while (dogSpeed > 18.6)                                                     //проверяем не слишком ли
 {                                                                           //оно велико и если это так
     Console.Write("Стар Тайтл медленней бегает! Введите число поменьше: "); //просим повторить ввод и
